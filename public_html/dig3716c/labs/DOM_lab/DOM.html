@@ -1,0 +1,318 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>DOM Lab</title>
+    <meta name="description" content="DOM Lab">
+    <meta name="author" content="Miko Jimenez">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- 3.1 DOM Children-->
+    <div id="threeOne">
+        <div>Users:</div>
+        <ul>
+            <li>John</li>
+            <li>Pete</li>
+        </ul>
+
+        <h4>Solutions</h4>
+        <ol>
+            <li><code>document.body.children[0]</code></li>
+            <li><code>document.body.children[1]</code></li>
+            <li><code>document.body.children[1]</code></li>
+        </ol>
+
+    </div>
+
+    <hr>
+
+    <!-- 3.2 The Sibling Question-->
+    <div id="threeTwo">
+        <ul>
+            <li>Is it true that <code>elem.lastChild.nextSibling</code> is always null? <strong>True</strong></li>
+            <li>Is it true that <code>elem.children[0].previousSibling</code> is always null? <strong>False</strong></li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <!-- 3.1 Select all diagonal cells-->
+    <div id="threeThree">
+        <table>
+            <tr>
+                <td>1:1</td>
+                <td>2:1</td>
+                <td>3:1</td>
+                <td>4:1</td>
+                <td>5:1</td>
+            </tr>
+            <tr>
+                <td>1:2</td>
+                <td>2:2</td>
+                <td>3:2</td>
+                <td>4:2</td>
+                <td>5:2</td>
+            </tr>
+            <tr>
+                <td>1:3</td>
+                <td>2:3</td>
+                <td>3:3</td>
+                <td>4:3</td>
+                <td>5:3</td>
+            </tr>
+            <tr>
+                <td>1:4</td>
+                <td>2:4</td>
+                <td>3:4</td>
+                <td>4:4</td>
+                <td>5:4</td>
+            </tr>
+            <tr>
+                <td>1:5</td>
+                <td>2:5</td>
+                <td>3:5</td>
+                <td>4:5</td>
+                <td>5:5</td>
+            </tr>
+        </table>
+    </div>
+
+    <hr>
+
+    <!-- 4.1 Search for elements-->
+    <div id="fourOne">
+        <ol>
+            <li><code>document.getElementById("age-table")</code></li>
+            <li><code>document.querySelectorAll("#age-table label")</code></li>
+            <li><code>table.getElementsByTagName("td")[0]</code></li>
+            <li><code>document.getElementsByName("search")[0]</code></li>
+            <li><code>form.getElementsByTagName("input")[0]</code></li>
+            <li><code>var el = form.querySelectorAll("input"); el[el.length-1];</code></li>
+        </ol>
+    </div>
+
+    <hr>
+
+    <!-- 5.1 -->
+    <div id="fiveOne">
+        <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three
+                <ol>
+                    <li>A</li>
+                    <li>B</li>
+                </ol>
+            </li>
+            <li>Four</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <!-- 5.2 -->
+    <div id="fiveTwo">
+        <p>The script will show an alert displaying a 1</p>
+    </div>
+
+    <hr>
+
+    <!-- 5.3 -->
+    <div id="fiveThree">
+        <p>The Contents of the <code>&lt;body&gt;</code> tag becomes a comment with the text "body" and is made with the contents of <code>&lt;body&gt;</code></p>
+    </div>
+
+    <hr>
+
+    <!-- 5.4 -->
+    <div id="fiveFour">
+        <p>Document is an <code>HTMLDocument</code> object.</p>
+    </div>
+
+    <hr>
+
+    <!-- 6.1 -->
+    <div id="sixOne">
+        <div data-widget-name="menu">Choose the genre</div>
+    </div>
+
+    <hr>
+
+    <!-- 6.2 -->
+    <div id="sixTwo">
+        <a name="list">the list</a>
+        <ul>
+            <li><a href="http://google.com">http://google.com</a></li>
+            <li><a href="/tutorial">/tutorial.html</a></li>
+            <li><a href="local/path">local/path</a></li>
+            <li><a href="ftp://ftp.com/my.zip">ftp://ftp.com/my.zip</a></li>
+            <li><a href="http://nodejs.org">http://nodejs.org</a></li>
+            <li><a href="http://internal.com/test">http://internal.com/test</a></li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <!-- 7.1 -->
+    <div id="sevenOne">
+        <p>2 and 3 do the same.</p>
+    </div>
+
+    <hr>
+
+    <!-- 7.2 -->
+    <div id="sevenTwo">
+        <ol id="elem">
+            <li>Hello</li>
+            <li>World</li>
+        </ol>
+    </div>
+
+    <hr>
+
+    <!-- 7.3 -->
+    <div id="sevenThree">
+        <p>The aaa remains because it in not enclosed in an element tag.</p>
+    </div>
+
+    <hr>
+
+    <!-- 7.4 -->
+    <div id="sevenFour"></div>
+
+    <hr>
+
+    <!-- 7.5 -->
+    <div id="sevenFive"></div>
+
+    <hr>
+
+    <!-- 7.6 -->
+    <div id="sevenSix">
+        <ul>
+            <li>Animals
+                <ul>
+                    <li>Mammals
+                        <ul>
+                            <li>Cows</li>
+                            <li>Donkeys</li>
+                            <li>Dogs</li>
+                            <li>Tigers</li>
+                        </ul>
+                    </li>
+                    <li>Other
+                        <ul>
+                            <li>Snakes</li>
+                            <li>Birds</li>
+                            <li>Lizards</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Fishes
+                <ul>
+                    <li>Aquarium
+                        <ul>
+                            <li>Guppy</li>
+                            <li>Angelfish</li>
+                        </ul>
+                    </li>
+                    <li>Sea
+                        <ul>
+                            <li>Sea trout</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <!-- 7.7 -->
+    <div id="sevenSeven">
+        <table>
+            <tr>
+                <th>MO</th>
+                <th>TU</th>
+                <th>WE</th>
+                <th>TH</th>
+                <th>FR</th>
+                <th>SA</th>
+                <th>SU</th>
+            </tr>
+        </table>
+    </div>
+
+    <hr>
+
+    <!-- 7.8 -->
+    <div id="sevenEight">
+        <div id="clock">
+            <span id="hour">hh</span>:<span id="min">mm</span>:<span id="sec">ss</span>
+        </div>
+        <input type="button" value="Start" id="clockStart">
+        <input type="button" value="Stop" id="clockStop">
+    </div>
+
+    <hr>
+
+    <!-- 7.9 -->
+    <div id="sevenNine">
+        <ul id="ul">
+            <li id="one">1</li>
+            <li id="two">4</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <!-- 7.10 -->
+    <div id="sevenTen">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John</td>
+                    <td>Smith</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Pete</td>
+                    <td>Brown</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>Ann</td>
+                    <td>Lee</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <hr>
+
+    <!-- 8.1 -->
+    <div class="eightOne"></div>
+</body>
+<script src="js/script.js"></script>
+
+</html>

@@ -1,0 +1,36 @@
+#threeThree table {
+    border-collapse: collapse;
+}
+
+#threeThree td {
+    border: 1px solid black;
+    padding: 3px 5px;
+}
+
+#sevenSeven table {
+    border-collapse: collapse;
+}
+
+#sevenSeven td,
+#sevenSeven th {
+    border: 1px solid black;
+    padding: 3px;
+    text-align: center;
+}
+
+#sevenSeven th {
+    font-weight: bold;
+    background-color: #E6E6E6;
+}
+
+#hour {
+    color: red
+}
+
+#min {
+    color: green
+}
+
+#sec {
+    color: blue
+}
