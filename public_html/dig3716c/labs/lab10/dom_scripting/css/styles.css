@@ -1,0 +1,63 @@
+body {
+	font-family: sans-serif;
+}
+div#story {
+	width: 580px;
+	padding: 10px;
+}
+h2 {
+	font-size: 21px;
+	line-height: 22px;
+	font-weight: 700;
+	color: #555;
+}
+ul {
+	height: 20px;
+}
+ul#infoBar {
+	list-style-type: disc;
+	color: #999;
+	margin-bottom: 15px;
+}
+ul#infoBar li {
+	font-size: 11px;
+	line-height: 17px;
+	font-weight: 400;
+	float: left;
+	margin-left: 20px;
+}
+ul#infoBar li:first-child {
+	list-style-type: none;
+	margin-left: 0;
+}
+ul#leftButtons {
+	float: left;
+	margin-bottom: 8px;
+}
+ul#rightButtons {
+	float: right;
+	margin-bottom: 8px;
+}
+ul#rightButtons li:last-child img {
+	position: relative;
+	top: -1px;
+}
+ul#leftButtons li, ul#rightButtons li {
+	float: left;
+	padding-left: 5px;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+p {
+	clear: left;
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 400;
+	padding-top: 12px;
+	border-top: 1px solid #eee;
+	color: #444;
+}

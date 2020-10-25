@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <title>Jacksonville Landing</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <style type="text/css">
+        #container {
+            width: 600px;
+            height: 210px;
+            background-color: #fbf6f0;
+        }
+
+        ul {
+            float: left;
+            height: 210px;
+            width: 150px;
+        }
+
+        #changingContent {
+            float: left;
+            height: 210px;
+            width: 400px;
+        }
+    </style>
+    <script type="text/javascript">
+        function replaceParkingInfo(event) {
+            event.preventDefault();
+            var changingContentDiv = document.getElementById('changingContent');
+
+            while (changingContentDiv.hasChildNodes()) {
+                changingContentDiv.removeChild(changingContentDiv.lastChild);
+            }
+
+            var newParagraph1 = document.createElement('p');
+            var newParagraph1Text = document.createTextNode("Ample downtown parking is available within close proximity to The Jacksonville Landing. Options include The Landing's own lot immediately east of the property, garage, metered street and peripheral parking.");
+            newParagraph1.appendChild(newParagraph1Text);
+
+            changingContentDiv.appendChild(newParagraph1);
+
+            var newParagraph2 = document.createElement('p');
+            var newParagraph2Text = document.createTextNode("Complete parking information and directions are available at ");
+            newParagraph2.setAttribute('class', 'italicized');
+
+            var newAnchor = document.createElement('a');
+            var newAnchorText = document.createTextNode("Directions + Parking");
+            newAnchor.appendChild(newAnchorText);
+            newAnchor.setAttribute('href', '#');
+
+            newParagraph2.appendChild(newParagraph2Text);
+            newParagraph2.appendChild(newAnchor);
+
+            changingContentDiv.appendChild(newParagraph2);
+        }
+
+        function replaceVendor(event) {
+            event.preventDefault();
+
+            var changingContentDiv = document.getElementById('changingContent');
+
+            while (changingContentDiv.hasChildNodes()) {
+                changingContentDiv.removeChild(changingContentDiv.lastChild);
+            }
+
+            var newH2 = document.createElement('h2');
+            var newH2Anchor = document.createElement('a');
+            var newH2AnchorText = document.createTextNode("Dipper Dan's");
+            newH2Anchor.appendChild(newH2AnchorText);
+            newH2Anchor.setAttribute('href', '#');
+            newH2.appendChild(newH2Anchor);
+
+            changingContentDiv.appendChild(newH2);
+
+            var newParagraph1 = document.createElement('p');
+            var newParagraph1Text = document.createTextNode("Ice cream shop with all the fixins’, fun foods, nachos and more!");
+            newParagraph1.appendChild(newParagraph1Text);
+
+            changingContentDiv.appendChild(newParagraph1);
+
+            var newParagraph2 = document.createElement('p');
+            newParagraph2.setAttribute('class', 'italicized');
+
+            var newAnchor = document.createElement('a');
+            var newAnchorText = document.createTextNode("View more Dining + Nightlife");
+            newAnchor.appendChild(newAnchorText);
+            newAnchor.setAttribute('href', '#');
+
+            newParagraph2.appendChild(newAnchor);
+
+            changingContentDiv.appendChild(newParagraph2);
+        }
+
+        function replaceHotels(event) {
+            event.preventDefault();
+
+            var changingContentDiv = document.getElementById('changingContent');
+
+            while (changingContentDiv.hasChildNodes()) {
+                changingContentDiv.removeChild(changingContentDiv.lastChild);
+            }
+
+            var newH2 = document.createElement('h2');
+            var newH2Anchor = document.createElement('a');
+            var newH2AnchorText = document.createTextNode("Marriot Jacksonville");
+            newH2Anchor.appendChild(newH2AnchorText);
+            newH2Anchor.setAttribute('href', '#');
+            newH2.appendChild(newH2Anchor);
+
+            changingContentDiv.appendChild(newH2);
+
+            var newParagraph1 = document.createElement('p');
+            var newParagraph1Text = document.createTextNode("4-star, family-friendly resort with comfortable rooms and premium hotel amenities.");
+            newParagraph1.appendChild(newParagraph1Text);
+
+            changingContentDiv.appendChild(newParagraph1);
+
+            var newAnchor = document.createElement('a');
+            var newAnchorText = document.createTextNode("Book Your Stay Now");
+            newAnchor.appendChild(newAnchorText);
+            newAnchor.setAttribute('href', '#');
+        }
+        
+        function replaceGroups(event) {
+            event.preventDefault();
+
+            var changingContentDiv = document.getElementById('changingContent');
+
+            while (changingContentDiv.hasChildNodes()) {
+                changingContentDiv.removeChild(changingContentDiv.lastChild);
+            }
+
+            var newH2 = document.createElement('h2');
+            var newH2Anchor = document.createElement('a');
+            var newH2AnchorText = document.createTextNode("Jacksonville Zoo and Gardens");
+            newH2Anchor.appendChild(newH2AnchorText);
+            newH2Anchor.setAttribute('href', '#');
+            newH2.appendChild(newH2Anchor);
+
+            changingContentDiv.appendChild(newH2);
+
+            var newParagraph1 = document.createElement('p');
+            var newParagraph1Text = document.createTextNode("The Jacksonville Zoo and Gardens, located in Jacksonville, Florida, sits at the mouth of the Trout River, near where it flows into the St. Johns River. The zoo occupies approximately 122 acres and has over 2,000 animals and 1,000 plant species in its collection. The zoo has grown from its modest beginnings in Springfield to be considered one of the city's premier attractions, with more than one million visits annually.");
+            newParagraph1.appendChild(newParagraph1Text);
+
+            changingContentDiv.appendChild(newParagraph1);
+
+            var newAnchor = document.createElement('a');
+            var newAnchorText = document.createTextNode("Buy Tickets");
+            newAnchor.appendChild(newAnchorText);
+            newAnchor.setAttribute('href', '#');
+        }
+
+        function init() {
+            // this stuff runs after the page finishes loading
+            //replaceChangingContent();
+            var parkingInfoAnchor = document.getElementById('parkingInfoAnchor');
+            parkingInfoAnchor.addEventListener('click', replaceParkingInfo, false);
+            var vendorAnchor = document.getElementById('vendorAnchor');
+            vendorAnchor.addEventListener('click', replaceVendor, false);
+            var hotelsNearbyAnchor = document.getElementById('hotelsNearbyAnchor');
+            hotelsNearbyAnchor.addEventListener('click', replaceHotels, false);
+            var groupsEventsAnchor = document.getElementById('groupsEventsAnchor');
+            groupsEventsAnchor.addEventListener('click', replaceGroups, false);
+        }
+
+        window.addEventListener('load', init, false);
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <ul>
+            <li><a id="parkingInfoAnchor" href="#">Parking Info</a></li>
+            <li><a id="vendorAnchor" href="#">Featured Vendor</a></li>
+            <li><a id="hotelsNearbyAnchor" href="#">Hotels Nearby</a></li>
+            <li><a id="groupsEventsAnchor" href="#">Groups &amp; Events</a></li>
+        </ul>
+        <div id="changingContent">
+
+        </div>
+    </div>
+</body></html>
