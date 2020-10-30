@@ -1,0 +1,23 @@
+a {
+    padding: 2px;
+}
+
+#img {
+    display: none;
+    border: 1px solid #000;
+}
+
+#init {
+    display: inline-block;
+    border: 1px solid #000;
+}
+
+.thumb {
+    border: 1px solid gray;
+    padding: 4px;
+}
+
+.thumb:hover {
+    border: 2px solid red;
+    padding: 3px;
+}
