@@ -9,81 +9,169 @@
     <meta name="description" content="Assignment 2">
     <meta name="author" content="Miko Jimenez">
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/process_form.js"></script>
 
 </head>
 
 <body>
-    <div id="form-container">
-        <form name="survey">
-            <fieldset>
-                <legend>User Info</legend>
-
-                <label for="inp_fName" id="label_fName">First Name:</label>
-                <input type="text" name="fName" id="inp_fName" placeholder="John" required>
-                <br>
-
-                <label for="inp_lName" id="label_lName">Last Name:</label>
-                <input type="text" name="lName" id="inp_lName" placeholder="Doe" required>
-                <br>
-
-                <label for="inp_email" id="label_email">Email:</label>
-                <input type="text" name="email" id="inp_email" placeholder="john.doe@company.com" required>
-                <br>
-
-                <label for="inp_tel" id="label_tel">Phone Number:</label>
-                <input type="text" name="tel" id="inp_tel" placeholder="1234-567-890" required>
-                <br>
-
-                <label for="inp_url" id="label_url">Survey Address:</label>
-                <input type="text" name="url" id="inp_url" placeholder="http://sulley.cah.ucf.edu/~novatnak" required>
-                <br>
-
-                <label><input type="checkbox" name="anom" id="inp_anom" aria-label="Anonymous"> Answer Anonymously</label>
-            </fieldset>
-
-            <fieldset>
-                <legend>Survey Questions</legend>
-
-                <div class="radio-group">
-                    <h5>How much prior coding experience do you have?</h5>
-                    <label><input type="radio" name="q1" value="0" required> &lt;1 Year</label>
-                    <label><input type="radio" name="q1" value="1" required> 1 Year</label>
-                    <label><input type="radio" name="q1" value="2" required> 2 - 3 Years</label>
-                    <label><input type="radio" name="q1" value="3" required> 3+ Years</label>
-                    <hr>
-                </div>
-
-                <div class="radio-group">
-                    <h5>How many languages do you know?</h5>
-                    <label><input type="radio" name="q2" value="0" required> 1 Language</label>
-                    <label><input type="radio" name="q2" value="1" required> 2 - 3 Languages</label>
-                    <label><input type="radio" name="q2" value="2" required> 4 - 5 Languages</label>
-                    <label><input type="radio" name="q2" value="3" required> 5+ Languages</label>
-                    <hr>
-                </div>
-
-                <div class="radio-group">
-                    <h5>What Operating System do you use?</h5>
-                    <label><input type="radio" name="q3" value="0" required> Windows</label>
-                    <label><input type="radio" name="q3" value="1" required> MacOS</label>
-                    <label><input type="radio" name="q3" value="2" required> Linux</label>
-                    <hr>
-                </div>
-            </fieldset>
-
-            <button type="button" id="frm_submit">Submit</button>
-            <button type="reset">Reset</button>
-            <h5 id="ansInfo" class="hide">Please fill out your information above.</h5>
-            <h5 id="ansAll" class="hide">Please answer all the survey questions.</h5>
-        </form>
-    </div>
-    <div id="result-container" class="hide">
+    <!-- Header -->
+    <header>
+        <h1>Programming Experience Quiz</h1>
+    </header>
+    
+    <!-- Content Grid -->
+    <div id="content">
+        
+        <!-- Left Coloumn -->
         <div>
-            <h2>You Earned... </h2>
-            <h1 id="result">ERROR</h1>
-            <img alt="award" src="img/0.png" id="badge">
+            <!-- Form -->
+            <div id="form-container">
+                <form name="survey">
+                    
+                    <!-- User Info Section -->
+                    <fieldset>
+                        <legend>Your Info</legend>
+
+                        <div id="info">
+                            <div class="grid-item">
+                                <label for="inp_fName">First Name:</label>
+                                <input type="text" name="fName" id="inp_fName" placeholder="John" required>
+                            </div>
+                            <p id="label_fName"></p>
+
+                            <div class="grid-item">
+                                <label for="inp_lName">Last Name:</label>
+                                <input type="text" name="lName" id="inp_lName" placeholder="Doe" required>
+                            </div>
+                            <p id="label_lName"></p>
+
+                            <div class="grid-item">
+                                <label for="inp_email">Email:</label>
+                                <input type="text" name="email" id="inp_email" placeholder="john.doe@company.com" required>
+                            </div>
+                            <p id="label_email"></p>
+
+                            <div class="grid-item">
+                                <label for="inp_tel">Phone Number:</label>
+                                <input type="text" name="tel" id="inp_tel" placeholder="1234-567-890" required>
+                            </div>
+                            <p id="label_tel"></p>
+
+                            <div class="grid-item">
+                                <label for="inp_url">Survey Address:</label>
+                                <input type="text" name="url" id="inp_url" placeholder="http://students.cah.ucf.edu/~novatnak" required>
+                            </div>
+                            <p id="label_url"></p>
+                            
+                            <!-- Anonymous setting -->
+                            <div class="grid-item">
+                                <label><input type="checkbox" name="anom" id="inp_anom" aria-label="Anonymous"> Answer Anonymously</label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Survey Section -->
+                    <fieldset id="survey">
+                        <legend>Survey Questions</legend>
+
+                        <div class="radio-group">
+                            <h5>How much prior coding experience do you have?</h5>
+                            <label><input type="radio" name="q1" value="0" required> &lt;1 Year</label>
+                            <label><input type="radio" name="q1" value="1" required> 1 Year</label>
+                            <label><input type="radio" name="q1" value="2" required> 2 - 3 Years</label>
+                            <label><input type="radio" name="q1" value="3" required> 3+ Years</label>
+                            <hr>
+                        </div>
+
+                        <div class="radio-group">
+                            <h5>How many languages do you know?</h5>
+                            <label><input type="radio" name="q2" value="0" required> 1 Language</label>
+                            <label><input type="radio" name="q2" value="1" required> 2 - 3 Languages</label>
+                            <label><input type="radio" name="q2" value="2" required> 4 - 5 Languages</label>
+                            <label><input type="radio" name="q2" value="3" required> 5+ Languages</label>
+                            <hr>
+                        </div>
+
+                        <div class="radio-group">
+                            <h5>What Operating System do you use?</h5>
+                            <label><input type="radio" name="q3" value="0" required> Windows</label>
+                            <label><input type="radio" name="q3" value="1" required> MacOS</label>
+                            <label><input type="radio" name="q3" value="2" required> Linux</label>
+                        </div>
+                    </fieldset>
+                    
+                    <!-- Form Controls -->
+                    <button type="button" id="frm_submit">Submit</button>
+                    <button type="reset">Reset</button>
+                    
+                    <!-- Form Errors -->
+                    <h5 id="ans-info" class="hide">Please fill out your information above.</h5>
+                    <h5 id="ans-all" class="hide">Please answer all the survey questions.</h5>
+                </form>
+            </div>
+            
+            <!-- Survey Results, hide until submitted -->
+            <div id="result-container" class="hide">
+                <div>
+                    <h2>You Earned... </h2>
+                    <h1 id="result">ERROR</h1>
+                    
+                    <!-- Badge -->
+                    <img alt="award" src="img/0.png" id="badge">
+                    <a style="display: block;" target="_blank" id="badge_url">URL</a>
+                    <button type="button" onclick="javascript:location.reload();" id="reload">Start Over</button>
+                    <hr>
+                    
+                    <!-- User inputs -->
+                    <div id="ans-disp">
+                        <p>User Info:</p>
+                        <ul id="ans-disp-info">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <p>Answers:</p>
+                        <ol id="ans-disp-q">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right Coloumn -->
+        <div>
+            
+            <!-- Sidebar -->
+            <div id="sidebar">
+                <div>
+                    <p>Learn more about your programming experience level with this quick and easy quiz.</p>
+                    <img src="img/side.png" alt="Award">
+                    <hr>
+                    <br>
+                    <h3>Checkout My Other Projects</h3>
+                    <a href="https://mikojimenez.com" target="_blank"><img src="img/logo2.png" alt="Photography Logo">
+                    </a>
+                    <br>
+                    <a href="https://github.com/mikojimnz" target="_blank">
+                        <img src="img/github.png" alt="GitHub Logo">
+                        <h4>GitHub</h4>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
-</body></html>
+    
+    <!-- Footer -->
+    <footer>
+        <h6>Created by Miko Jimenez</h6>
+    </footer>
+</body>
+
+</html>
