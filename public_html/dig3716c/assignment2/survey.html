@@ -1,0 +1,89 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Survey - Miko Jimenez</title>
+    <meta name="description" content="Assignment 2">
+    <meta name="author" content="Miko Jimenez">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/process_form.js"></script>
+
+</head>
+
+<body>
+    <div id="form-container">
+        <form name="survey">
+            <fieldset>
+                <legend>User Info</legend>
+
+                <label for="inp_fName" id="label_fName">First Name:</label>
+                <input type="text" name="fName" id="inp_fName" placeholder="John" required>
+                <br>
+
+                <label for="inp_lName" id="label_lName">Last Name:</label>
+                <input type="text" name="lName" id="inp_lName" placeholder="Doe" required>
+                <br>
+
+                <label for="inp_email" id="label_email">Email:</label>
+                <input type="text" name="email" id="inp_email" placeholder="john.doe@company.com" required>
+                <br>
+
+                <label for="inp_tel" id="label_tel">Phone Number:</label>
+                <input type="text" name="tel" id="inp_tel" placeholder="1234-567-890" required>
+                <br>
+
+                <label for="inp_url" id="label_url">Survey Address:</label>
+                <input type="text" name="url" id="inp_url" placeholder="http://sulley.cah.ucf.edu/~novatnak" required>
+                <br>
+
+                <label><input type="checkbox" name="anom" id="inp_anom" aria-label="Anonymous"> Answer Anonymously</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Survey Questions</legend>
+
+                <div class="radio-group">
+                    <h5>How much prior coding experience do you have?</h5>
+                    <label><input type="radio" name="q1" value="0" required> &lt;1 Year</label>
+                    <label><input type="radio" name="q1" value="1" required> 1 Year</label>
+                    <label><input type="radio" name="q1" value="2" required> 2 - 3 Years</label>
+                    <label><input type="radio" name="q1" value="3" required> 3+ Years</label>
+                    <hr>
+                </div>
+
+                <div class="radio-group">
+                    <h5>How many languages do you know?</h5>
+                    <label><input type="radio" name="q2" value="0" required> 1 Language</label>
+                    <label><input type="radio" name="q2" value="1" required> 2 - 3 Languages</label>
+                    <label><input type="radio" name="q2" value="2" required> 4 - 5 Languages</label>
+                    <label><input type="radio" name="q2" value="3" required> 5+ Languages</label>
+                    <hr>
+                </div>
+
+                <div class="radio-group">
+                    <h5>What Operating System do you use?</h5>
+                    <label><input type="radio" name="q3" value="0" required> Windows</label>
+                    <label><input type="radio" name="q3" value="1" required> MacOS</label>
+                    <label><input type="radio" name="q3" value="2" required> Linux</label>
+                    <hr>
+                </div>
+            </fieldset>
+
+            <button type="button" id="frm_submit">Submit</button>
+            <button type="reset">Reset</button>
+            <h5 id="ansInfo" class="hide">Please fill out your information above.</h5>
+            <h5 id="ansAll" class="hide">Please answer all the survey questions.</h5>
+        </form>
+    </div>
+    <div id="result-container" class="hide">
+        <div>
+            <h2>You Earned... </h2>
+            <h1 id="result">ERROR</h1>
+            <img alt="award" src="img/0.png" id="badge">
+        </div>
+    </div>
+</body></html>
