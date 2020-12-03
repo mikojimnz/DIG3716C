@@ -29,7 +29,7 @@
         <div>
             <!-- Form -->
             <div id="form-container">
-                <form name="survey">
+                <form name="survey" method="post" action="">
                     
                     <!-- User Info Section -->
                     <fieldset>
@@ -44,31 +44,31 @@
 
                             <div class="grid-item">
                                 <label for="inp_lName">Last Name:</label>
-                                <input type="text" name="lName" id="inp_lName" placeholder="Doe" required>
+                                <input type="text" name="lName" placeholder="Doe" required>
                             </div>
                             <p id="label_lName"></p>
 
                             <div class="grid-item">
                                 <label for="inp_email">Email:</label>
-                                <input type="text" name="email" id="inp_email" placeholder="john.doe@company.com" required>
+                                <input type="text" name="email" placeholder="john.doe@company.com" required>
                             </div>
                             <p id="label_email"></p>
 
                             <div class="grid-item">
                                 <label for="inp_tel">Phone Number:</label>
-                                <input type="text" name="tel" id="inp_tel" placeholder="1234-567-890" required>
+                                <input type="text" name="tel" placeholder="1234-567-890" required>
                             </div>
                             <p id="label_tel"></p>
 
                             <div class="grid-item">
                                 <label for="inp_url">Survey Address:</label>
-                                <input type="text" name="url" id="inp_url" placeholder="http://students.cah.ucf.edu/~novatnak" required>
+                                <input type="text" name="url" placeholder="http://students.cah.ucf.edu/~novatnak" required>
                             </div>
                             <p id="label_url"></p>
                             
                             <!-- Anonymous setting -->
                             <div class="grid-item">
-                                <label><input type="checkbox" name="anom" id="inp_anom" aria-label="Anonymous"> Answer Anonymously</label>
+                                <label><input type="checkbox" name="anom" aria-label="Anonymous"> Answer Anonymously</label>
                             </div>
                         </div>
                     </fieldset>

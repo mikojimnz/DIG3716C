@@ -5,12 +5,12 @@ window.onload = function () {
     "use strict"
     
     // Common form elements
-    var fName = document.getElementById("inp_fName");
-    var lName = document.getElementById("inp_lName");
-    var email = document.getElementById("inp_email");
-    var tel = document.getElementById("inp_tel");
-    var url = document.getElementById("inp_url");
-    var box = document.getElementById("inp_anom");
+    var fName = document.survey.fName;
+    var lName = document.survey.lName;
+    var email = document.survey.email;
+    var tel = document.survey.tel;
+    var url = document.survey.url;
+    var box = document.survey.anom;
 
     // Check if "anonymous" box is checked.
     function disableFields() {
@@ -18,20 +18,20 @@ window.onload = function () {
 
         if (box.checked) {
             // Disable inputs
-            document.getElementById("inp_fName").disabled = true;
-            document.getElementById("inp_lName").disabled = true;
+            fName.disabled = true;
+            lName.disabled = true;
             
             // Clear inputs
-            document.getElementById("inp_fName").value = "";
-            document.getElementById("inp_lName").value = "";
+            fName.value = "";
+            lName.value = "";
             
             // Clear existings validation stats
-            document.getElementById("label_fName").removeAttribute("class");
-            document.getElementById("label_lName").removeAttribute("class");
+            fName.removeAttribute("class");
+            lName.removeAttribute("class");
         } else {
             // Enable inputs
-            document.getElementById("inp_fName").disabled = false;
-            document.getElementById("inp_lName").disabled = false;
+            fName.disabled = false;
+            lName.disabled = false;
         }
     }
 
