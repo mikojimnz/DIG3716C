@@ -14,8 +14,6 @@ window.onload = function () {
 
     // Check if "anonymous" box is checked.
     function disableFields() {
-        var box = document.getElementById("inp_anom");
-
         if (box.checked) {
             // Disable inputs
             fName.disabled = true;
@@ -178,7 +176,7 @@ window.onload = function () {
     document.body.addEventListener("keyup", validateData, false);
     
     // Listen for anonymous box state change
-    document.getElementById("inp_anom").addEventListener("change", disableFields, false);
+    box.addEventListener("change", disableFields, false);
     
     // Listen for form submit click
     document.getElementById("frm_submit").addEventListener("click", formSubmit, false);
